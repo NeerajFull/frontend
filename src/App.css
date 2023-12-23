@@ -1,38 +1,341 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Segoe UI,Arial,Roboto,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+}
+
+/* Header */
+
+.head{
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 1px 8px 0.3px gray;
+  background: #eee;
+  align-items: center;
+  width: 100%;
+}
+
+.left-head{
+  vertical-align: middle;
+  margin-left: 1rem;
+  width: 22rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-head>p{
+  font-size: 1.3rem;
+  color: #616161;
+  vertical-align: middle;
+}
+
+.right-head{
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.logo-class{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/* Header */
+
+/* Section */
+.low-text{
+  margin-top: 15px;
   text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bold{
+  font-size: 2rem;
+  color: #009688;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.small{
+  color: #9a9a9a;
+  font-size: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.big-image-slides{
+  margin-top: 20px;
+  transition: 300ms ease-in-out;
+}
+
+.slide-images{
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Section */
+
+
+/* Grid Section */
+.grid-section{
+  width: 100%;
+  margin-top: 1.5rem;
+  box-shadow: 0px 0px 4px 0px rgb(158, 158, 158);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.8rem;
+  row-gap: 0.6rem;
+  margin-bottom: 4px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.main-grid-div{
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 0px 4px 0px rgb(202, 202, 202);
+  padding-top: 1.5rem;
+  height: 27rem;
+}
+
+.Product-info{
+  font-size: 0.9rem;
+}
+
+.image-grid{
+  margin-bottom: 10px;
+}
+
+.image-grid-do{
+  width: 255px;
+  height: 255px;
+  object-fit: cover;
+}
+
+.price{
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  text-align: start;
+  color: orangered;
+  margin-left: 8px;
+}
+
+/* Grid Section */
+
+
+/* Footer */
+
+.footer-div{
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 3px 14px 2px rgba(0,0,0, .12);
+}
+
+.text-footer{
+  font-size: 12px;
+  color: #868f8b;
+  margin-top: 3px;
+}
+
+.footer-img{
+  width: 18px;
+  height: 18px;
+}
+
+.flex-class{
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-decoration: none;
+}
+
+/* Footer */
+
+
+/* search */
+
+.search-bar-header{
+  text-align: center;
+  margin-top: 0.8rem;
+}
+.search-bar{
+  width: 90%;
+  padding: 0.8rem 0.4rem;
+  border: none;
+  color: rgba(0,0,0,.87);
+  font-size: 14px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px 0 rgba(0,0,0,.14), 
+              0 1px 5px 0 rgba(0,0,0,.12);
+  transition: background .3s cubic-bezier(.25,.8,.5,1);
+  border-radius: 2px;
+}
+
+/* search */
+
+/* Me */
+
+.me-header{
+  height: 56px;
+  width: 100%;
+  padding: 0 15px;
+  background: #009688;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 
+              0 4px 5px 0 rgba(0,0,0,.14), 
+              0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+.header-div{
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-arrow{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.me-left-text{
   color: white;
+  font-size: 20px;
+  vertical-align: middle;
 }
 
-.App-link {
-  color: #61dafb;
+.login-page{
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mobile{
+  width: 100%;
+  height: 48px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px 0 rgba(0,0,0,.14), 
+              0 1px 5px 0 rgba(0,0,0,.12);
+  padding: 0 12px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  line-height: 48px;
+  margin-bottom: 35px;
+}
+
+.mobile-img{
+  width: 20px;
+  height: 20px;
+}
+
+.mobile-inp{
+  font-size: 1rem;
+  width: 90%;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  outline: none;
+}
+
+.btn-me{
+  width: 240px;
+  height: 44px;
+  background-color: #009688;
+  color: white;
+  font-size: 14px;
+  border: none;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px 0 rgba(0,0,0,.14), 
+              0 1px 5px 0 rgba(0,0,0,.12);
+  margin-bottom: 1.5rem;
+}
+
+.btn-me-1{
+  padding: 0 15px;
+  height: 40px;
+  background-color: #f5f5f5;
+  color: rgba(0,0,0,.87);
+  font-size: 14px;
+  border: none;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px 0 rgba(0,0,0,.14), 
+              0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+#mobile-text{
+  font-size: 12px;
+  color: red;
+  margin-left: 30px;
+  font-weight: 500;
+}
+
+
+.mobile-js{
+  width: 100%;
+  height: 48px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px 0 rgba(0,0,0,.14), 
+              0 1px 5px 0 rgba(0,0,0,.12);
+  padding: 0 12px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  line-height: 48px;
+  margin-bottom: 15px;
+}
+
+
+/* Me */
+
+@media screen and (max-width: 480px) {
+  .left-head{
+      width: 14rem;
+  }    
+  .left-head>p{
+      font-size: 1.2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .grid-section{
+      width: 100%;
+      margin-top: 1.2rem;
+      box-shadow: 0px 0px 4px 0px rgb(158, 158, 158);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0.6rem;
+      row-gap: 0.4rem;
+      margin-bottom: 4px;
+      padding: 1rem;
+      margin-bottom: 2rem;
   }
+
+  .main-grid-div{
+      width: 100%;
+      text-align: center;
+      box-shadow: 0px 0px 4px 0px rgb(202, 202, 202);
+      padding-top: 1.5rem;
+      height: 25rem;
+  }
+  .image-grid-do{
+      width: 90%;
+      height: 200px;
+  }
+  
 }
