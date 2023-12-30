@@ -238,7 +238,7 @@ body{
   align-items: center;
   position: relative;
   line-height: 48px;
-  margin-bottom: 35px;
+  margin-bottom: 7px;
 }
 
 .mobile-img{
@@ -338,4 +338,558 @@ body{
       height: 200px;
   }
   
+}
+
+button {
+  all: unset
+}
+
+
+
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Segoe UI,Arial,Roboto,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+}
+
+/* Header */
+
+.header{
+  height: 13rem;
+  background-color: #009688;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  transition: .3s cubic-bezier(.25,.8,.5,1);
+  margin-bottom: 1rem;
+  border-radius: 0.15rem;
+}
+
+.user-details{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 15px;
+  height: 60px;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.left{
+  display: flex;
+  width: 13rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-img{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  box-shadow: 1px 2px 8px 0.1px rgb(71, 70, 70);
+}
+
+.user-name{
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.user-id{
+  color: white;
+  font-size: 14px;
+}
+
+.nine{
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+}
+
+.bell{
+  border-radius: 999px;
+  width: 21px;
+  height: 21px;
+}
+
+.right{
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  padding-top: 8px;
+  text-align: center;
+}
+
+.money{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.balance, .commission, .intrest{
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+.balance>p, .commission>p, .intrest>p{
+  margin-top: 4px;
+}
+
+.btn-balance{
+  margin-top: 4px;
+  background-color: rgb(51, 131, 223);
+  padding: 0.5rem 0.8rem;
+  border: none;
+  color: white;
+}
+
+.btn-commission{
+  margin-top: 4px;
+  background-color: rgb(51, 131, 223);
+  padding: 0.5rem 1.8rem;
+  border: none;
+  color: white;
+}
+
+.btn-intrest{
+  margin-top: 4px;
+  background-color: rgb(51, 131, 223);
+  padding: 0.5rem 1.8rem;
+  border: none;
+  color: white;
+}
+
+/* Header */
+
+/* Footer */
+
+.footer-div{
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 3px 14px 2px rgba(0,0,0, .12);
+}
+
+.text-footer{
+  font-size: 12px;
+  color: #868f8b;
+  margin-top: 3px;
+}
+
+.footer-img{
+  width: 18px;
+  height: 18px;
+}
+
+.flex-class{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Footer */
+
+.signIn{
+  width: 25px;
+  height: 25px;
+  margin-right: 1.2rem;
+}
+
+.list-text{
+  color: rgba(0, 0, 0, 0.753);
+}
+
+.list-down{
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+
+.main-options{
+  margin-bottom: 2rem;
+}
+
+.flex-box{
+  display: flex;
+  width: 100%;
+  height: 3.2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.4rem;
+}
+
+.left-side-flex{
+  display: flex;
+  width: 15rem;
+  align-items: center;
+}
+
+.wallet-click{
+  cursor: pointer;
+}
+
+.wallet-click:hover{
+  background-color: rgb(238, 238, 238);
+}
+
+.logout{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logout-btn{
+  width: 50%;
+  padding: 0.7rem 0;
+  font-size: 0.9rem;
+  box-shadow: 1px 1px 5px gray;
+  margin-bottom: 6rem;
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+  border: none;
+  color: rgb(75, 73, 73);
+}
+
+.wallet-right-img{
+  height: 11px;
+  width: 11px;
+  opacity: 0.6;
+  margin-right: 0.3rem;
+}
+
+.list-u{
+  margin-left: 4.6rem;
+}
+
+.list-p{
+  color: rgb(70, 70, 70);
+  height: 3rem;
+  width: 100%;
+  font-size: 0.97rem;
+  display: flex;
+  align-items: center;
+}
+
+ul{
+  list-style-type: none
+}
+
+.js-list-new{
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
+  margin-left: 4.6rem;
+  display: none;
+}
+
+.js-list-new-class{
+  display: block;
+}
+
+.js-list-upper{
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
+  margin-left: 4.6rem;
+  display: none;
+}
+
+.js-list-upper-class{
+  display: block;
+}
+
+
+.js-list-last{
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
+  margin-left: 4.6rem;
+  display: none;
+}
+
+.js-list-last-class{
+  display: block;
+}
+
+.wallet-click-new{
+  cursor: pointer;
+}
+.wallet-click-new:hover{
+  background-color: #e9f0ec;
+}
+
+
+.wallet-click-upper{
+  cursor: pointer;
+}
+
+.wallet-click-upper:hover{
+  background-color: #e9f0ec;
+}
+
+.wallet-click-last{
+  cursor: pointer;
+}
+
+.wallet-click-last:hover{
+  background-color: #e9f0ec;
+}
+
+
+@media screen and (max-width: 480px) {
+  .left{
+      width: 12rem;
+  }
+
+  .user-details{
+      padding-left: 20px;
+      padding-right: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Segoe UI,Arial,Roboto,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+}
+
+.header{
+  height: 60px;
+  background-color: #009688;
+  display: flex;
+  align-items: center;
+}
+
+.header1{
+  display: flex;
+}
+
+.header-text{
+  font-size: 1.4rem;
+  color: white;
+  margin:  0px 1rem;
+}
+
+.left-arrow{
+  height: 25px;
+  width: 25px;
+  margin-left: 1rem;
+}
+
+.logo{
+  height: 25px;
+  width: 25px;
+}
+
+.main-box{
+  padding: 1rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobile-number{
+  width: 90%;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px 0 rgba(0,0,0,.14), 
+              0 1px 5px 0 rgba(0,0,0,.12)
+              
+}
+
+.verification{
+  width: 90%;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.btn-otp{
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+}
+
+#hello-input{
+  border: none;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  width: 90%;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+input:focus,
+#hello-input:focus {
+      outline: none;
+      font-size: 0.8rem;
+}
+
+.privacy{
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.check-box{
+  width: 1rem;
+  height: 1rem;
+  font-size: .8rem;
+  line-height: 1.25;
+  margin-right: 0.5rem;
+}
+
+.btn-register{
+  width: 60%;
+  height: 2.5rem;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #009688;
+  border: none;
+  margin: 0 auto;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Segoe UI,Arial,Roboto,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+}
+
+.header{
+  height: 60px;
+  background-color: #009688;
+  display: flex;
+  align-items: center;
+}
+
+.header1{
+  display: flex;
+}
+
+.header-text{
+  font-size: 1.4rem;
+  color: white;
+  margin:  0px 1rem;
+}
+
+.left-arrow{
+  height: 25px;
+  width: 25px;
+  margin-left: 1rem;
+}
+
+.logo{
+  height: 25px;
+  width: 25px;
+}
+
+.main-box{
+  padding: 1rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobile-number{
+  width: 90%;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 
+              0 2px 2px 0 rgba(0,0,0,.14), 
+              0 1px 5px 0 rgba(0,0,0,.12)
+              
+}
+
+.verification{
+  width: 90%;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.btn-otp{
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+}
+
+#hello-input{
+  border: none;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  width: 90%;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+input:focus,
+#hello-input:focus {
+      outline: none;
+      font-size: 0.8rem;
+}
+
+.privacy{
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.check-box{
+  width: 1rem;
+  height: 1rem;
+  font-size: .8rem;
+  line-height: 1.25;
+  margin-right: 0.5rem;
+}
+
+.btn-register{
+  width: 60%;
+  height: 2.5rem;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #009688;
+  border: none;
+  margin: 0 auto;
 }

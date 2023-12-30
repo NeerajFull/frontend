@@ -1,22 +1,39 @@
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const OutFooter = () => {
     const navigate = useNavigate();
+    const userAccessToken = useSelector(store => store.user.userAccessToken);
 
     return <>
         <div className="footer-div">
-            <a id="myButton" className="Page1 flex-class" onClick={() => navigate("/")}>
+            <button id="myButton" className="Page1 flex-class" onClick={() => navigate("/")}>
                 <img className="footer-img" src="Images/Home.png" alt="" />
                 <span className="text-footer">Home</span>
-            </a>
-            <a className="Page2 flex-class" onClick={() => navigate("/search")}>
+            </button>
+            <button className="Page2 flex-class" onClick={() => navigate("/search")}>
                 <img className="footer-img" src="Images/Search.png" alt="" />
                 <span className="text-footer">search</span>
-            </a>
-            <a id="myButton" className="Page3 flex-class" onClick={() => navigate("/me")}>
-                <img className="footer-img" src="Images/Me.png" alt="" />
-                <span className="text-footer">Me</span>
-            </a>
+            </button>
+            {
+                !userAccessToken ?
+                    <button id="myButton" className="Page3 flex-class" onClick={() => navigate("/login")}>
+                        <img className="footer-img" src="Images/Me.png" alt="" />
+                        <span className="text-footer">Me</span>
+                    </button>
+                    :
+
+                    <>
+                        <button id="myButton" className="Page3 flex-class" onClick={() => navigate("/win")}>
+                            <img className="footer-img" src="Images/win.png" alt="" />
+                            <span className="text-footer">Win</span>
+                        </button>
+                        <button id="myButton" className="Page3 flex-class" onClick={() => navigate("/mine")}>
+                            <img className="footer-img" src="Images/Me.png" alt="" />
+                            <span className="text-footer">My</span>
+                        </button>
+                    </>
+            }
         </div>
 
     </>
