@@ -104,7 +104,7 @@ const ForgotPassword = () => {
                 </div>
                 <span style={{ fontSize: "13px", color: "red", display: verificationError ? "block" : "none" }}>Verification code is required</span>
                 <div onClick={handleOtp} style={{
-                    width: '35%', height: '3.3rem', marginLeft: '5%', display: 'flex', alignItems: 'center', boxShadow: `0 3px 1px -2px rgba(0,0,0,.2), 
+                    width: '35%', height: '3.3rem', marginLeft: '5%',display: "flex", boxShadow: `0 3px 1px -2px rgba(0,0,0,.2), 
                         0 2px 2px 0 rgba(0,0,0,.14), 
                         0 1px 5px 0 rgba(0,0,0,.12)`}}>
                     <button disabled={isOtpSent} className="btn-otp">{!isOtpSent ? "OTP" : "Please wait for few sec"}</button>

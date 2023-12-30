@@ -15,7 +15,7 @@ const Mine = () => {
     return <>
 
 <>
-  <header className="header">
+  <header className="mine-header">
     <div className="user-details">
       <div className="left">
         <div className="left-img">
