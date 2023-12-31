@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const OutFooter = () => {
     const navigate = useNavigate();
-    const userAccessToken = useSelector(store => store.user.userAccessToken);
+    const isLogin = useSelector(store => store.user.isLogin);
 
     return <>
         <div className="footer-div">
@@ -16,7 +16,7 @@ const OutFooter = () => {
                 <span className="text-footer">search</span>
             </button>
             {
-                !userAccessToken ?
+                !isLogin ?
                     <button id="myButton" className="Page3 flex-class" onClick={() => navigate("/login")}>
                         <img className="footer-img" src="Images/Me.png" alt="" />
                         <span className="text-footer">Me</span>

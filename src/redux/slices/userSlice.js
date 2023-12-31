@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   userAccessToken: "",
+  isLogin: false
 }
 
 export const counterSlice = createSlice({
@@ -11,10 +12,13 @@ export const counterSlice = createSlice({
     getUserAccessToken: (state, action) => {
       state.userAccessToken = action.payload
     },
+    setIsLogin: (state, action) => {
+      state.isLogin = action.payload
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { getUserAccessToken } = counterSlice.actions
+export const { getUserAccessToken, setIsLogin } = counterSlice.actions
 
 export default counterSlice.reducer

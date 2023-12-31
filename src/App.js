@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
 import OutFooter from './components/OutFooter';
 import Home from './components/Home';
@@ -6,23 +6,51 @@ import SearchPage from './components/SearchPage';
 import Login from './components/Login';
 import Win from './components/Win';
 import Mine from './components/Mine';
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useLayoutEffect } from 'react';
 import Register from './components/Register';
 import ForgotPassword from './components/ForgotPassword';
+import axios from 'axios';
+import { setIsLogin } from './redux/slices/userSlice';
 
 function App() {
-
-  const userAccessToken = useSelector(store => store.user.userAccessToken);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const phone = localStorage.getItem("maryPhone");
+  const isLogin = useSelector(store => store.user.isLogin);
+
+  const getLoginStatus = async () => {
+    try {
+      if (phone) {
+        const data = await axios.post("http://localhost:3000/api/get-status", {
+          phone: phone
+        });
+        if (data.data.status) {
+          dispatch(setIsLogin(data.data.isLoggedIn));
+          return data.data.isLoggedIn;
+        } else {
+          alert("Not able to get the login status");
+        }
+      }
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   useEffect(() => {
-    if (userAccessToken && (window.location.href.includes("login") || window.location.href.includes("register"))) {
-      navigate("/mine");
-    } else if (!userAccessToken) {
-      (window.location.href.includes("mine") || window.location.href.includes("win")) && navigate("/login")
-    }
-  }, [userAccessToken, window.location.href])
+    getLoginStatus()
+      .then(res => {
+        if (res) {
+          return;
+        } else {
+          navigate("/login");
+        }
+      })
+      .catch(err => console.log(err));
+  }, []);
+
+
 
   return (
     <div className="App">

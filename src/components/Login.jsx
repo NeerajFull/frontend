@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { getUserAccessToken } from "../redux/slices/userSlice";
+import { setIsLogin } from "../redux/slices/userSlice";
 
 
 const Login = () => {
@@ -24,11 +24,19 @@ const Login = () => {
                 });
                 console.log(data)
                 const d = await data.data;
-                console.log(d)
                 if (d.status) {
-                    dispatch(getUserAccessToken(d.userAccessToken));
-                    navigate("/mine");
-                }else{
+                    const data = await axios.patch("http://localhost:3000/api/set-login-status", {
+                        phone,
+                        isLoggedIn: true
+                    });
+                    if (data.data.status) {
+                        localStorage.setItem("maryPhone", phone);
+                        dispatch(setIsLogin(true));
+                        navigate("/mine");
+                    } else {
+                        alert("something went wrong");
+                    }
+                } else {
                     setErrorMessage(d.message);
                 }
             }
@@ -44,6 +52,7 @@ const Login = () => {
             }
         } catch (error) {
             setErrorMessage(error.response.data.message);
+            setPasswordError(true);
             console.log(error)
         }
     }
